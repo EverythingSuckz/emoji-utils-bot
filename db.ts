@@ -57,7 +57,7 @@ export async function addOrUpdateUser(
         is_premium = EXCLUDED.is_premium;
 `;
 
-  const output = await postgres.queryObject(sqlQuery);
+  await postgres.queryObject(sqlQuery);
 }
 
 export async function setGroup(
@@ -102,7 +102,7 @@ export async function setGroup(
 `;
   console.log(sqlQuery);
   
-  const output = await postgres.queryObject(sqlQuery);
+  await postgres.queryObject(sqlQuery);
 }
 
 export async function getGroupWelcome(

@@ -50,7 +50,7 @@ const handlers = new grammy.Composer<BotContext>();
 handlers.command(["start", "help"], async (ctx) => {
   ctx.reply(
     `Hello ${ctx.from?.first_name},\nSend me a photo or a document (less than 20 MB) and I can resize it for <a href='https://telegram.org/blog/custom-emoji'>custom emojis creations</a>.<b></b> ;)`,
-    { parse_mode: "HTML" },
+    { parse_mode: "HTML", disable_web_page_preview: true },
   );
 });
 
